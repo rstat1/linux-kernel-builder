@@ -1,0 +1,4 @@
+language: c
+dist: xenial
+script:
+  - ./build-kernel.sh

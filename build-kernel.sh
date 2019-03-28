@@ -9,5 +9,5 @@ tar xJf linux-${LATEST_VERSION}.tar.xz
 
 cp ../.config linux-${LATEST_VERSION}/
 cd linux-${LATEST_VERSION}
-make -j4
+make -j12
 cp vmlinux ../

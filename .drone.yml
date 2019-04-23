@@ -1,0 +1,11 @@
+kind: pipeline
+name: default
+
+steps:
+- name: test
+  image: debian
+  commands:
+  - echo "deb http://deb.debian.org/debian stretch main" > /etc/apt/sources.list
+  - apt update -qq
+  - apt install -y -qq gcc bison flex binutils
+  - ./build-kernel.sh

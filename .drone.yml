@@ -3,9 +3,9 @@ name: default
 
 steps:
 - name: test
-  image: debian
+  image: debian:strech
   commands:
   - echo "deb http://deb.debian.org/debian stretch main" > /etc/apt/sources.list
   - apt update -qq
-  - apt install -y -qq gcc bison flex binutils wget xz-utils make
+  - apt install -y -qq gcc bison flex binutils wget xz-utils make libssl1.0-dev libelf-dev
   - ./build-kernel.sh

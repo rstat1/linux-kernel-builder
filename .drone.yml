@@ -7,5 +7,5 @@ steps:
   commands:
   - echo "deb http://deb.debian.org/debian stretch main" > /etc/apt/sources.list
   - apt update -qq
-  - apt install -y -qq gcc bison flex binutils wget
+  - apt install -y -qq gcc bison flex binutils wget xz-utils
   - ./build-kernel.sh

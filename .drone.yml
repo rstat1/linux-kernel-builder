@@ -8,6 +8,8 @@ steps:
   - apt update -qq
   - apt install -y -qq gcc bison flex binutils wget xz-utils make libssl1.0-dev libelf-dev bc
   - ./build-kernel.sh
+  when:
+    event: tag
   
 - name: release
   image: plugins/github-release
@@ -17,4 +19,6 @@ steps:
     files: kernel-build/vmlinux
     title: Linux Lernel
     note: ${DRONE_COMMIT}
+  when:
+    event: tag
   

@@ -3,7 +3,7 @@ name: default
 
 steps:
 - name: test
-  image: debian:strech
+  image: debian:stretch
   commands:
   - apt update -qq
   - apt install -y -qq gcc bison flex binutils wget xz-utils make libssl1.1-dev libelf-dev bc

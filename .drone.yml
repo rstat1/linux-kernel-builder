@@ -18,5 +18,5 @@ steps:
     title: Linux Lernel
     note: ${DRONE_COMMIT}
     
-triggers:
+trigger:
   event: tag

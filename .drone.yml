@@ -6,7 +6,7 @@ steps:
   image: debian:stretch
   commands:
   - apt update -qq
-  - apt install -y -qq gcc bison flex binutils wget xz-utils make libssl1.1-dev libelf-dev bc
+  - apt install -y -qq gcc bison flex binutils wget xz-utils make libssl1.0-dev libelf-dev bc
   - ./build-kernel.sh
   
 - name: release

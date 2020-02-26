@@ -17,7 +17,7 @@ steps:
     files: 
     - kernel-build/vmlinux
     - kernel-build/bzImage
-    title: Linux Lernel
+    title: Linux Kernel
     note: ${DRONE_COMMIT}
     
 trigger:

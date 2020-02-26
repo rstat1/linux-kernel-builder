@@ -16,7 +16,7 @@ steps:
       from_secret: github_token
     files: 
     - kernel-build/vmlinux
-    - kernel-build/arch/x86/boot/bzImage
+    - kernel-build/bzImage
     title: Linux Lernel
     note: ${DRONE_COMMIT}
     

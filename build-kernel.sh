@@ -11,3 +11,4 @@ cp ../.config linux-${LATEST_VERSION}/
 cd linux-${LATEST_VERSION}
 make -j12
 cp vmlinux ../
+cp arch/x86/boot/bzImage ../

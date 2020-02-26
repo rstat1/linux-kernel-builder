@@ -14,7 +14,9 @@ steps:
   settings:
     api_key:
       from_secret: github_token
-    files: kernel-build/vmlinux
+    files: 
+    - kernel-build/vmlinux
+    - kernel-build/arch/x86/boot/bzImage
     title: Linux Lernel
     note: ${DRONE_COMMIT}
     

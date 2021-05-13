@@ -27,8 +27,12 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run kernel build script
         run: ./build-kernel.sh
-      - uses: actions/checkout@master
-      - name: Create a Release
-        uses: elgohr/Github-Release-Action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          title: "Linux Kernel"
+          files: |
+            kernel-build/vmlinux
+            kernel-build/bzImage

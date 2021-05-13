@@ -21,11 +21,14 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      
+      - uses: actions/checkout@v2      
       - name: Instal Deps
-        run: sudo apt install -y libelf-dev bison flex
-      
+        run: sudo apt install -y libelf-dev bison flex      
       # Runs a single command using the runners shell
       - name: Run kernel build script
-        run: ./build-kernel.sh      
+        run: ./build-kernel.sh
+      - uses: actions/checkout@master
+      - name: Create a Release
+        uses: elgohr/Github-Release-Action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}

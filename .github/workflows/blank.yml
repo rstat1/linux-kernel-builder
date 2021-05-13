@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Instal Deps
-        run: apt install -y libelf-dev bison flex
+        run: sudo apt install -y libelf-dev bison flex
       
       # Runs a single command using the runners shell
       - name: Run kernel build script

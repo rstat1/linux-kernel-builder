@@ -1,5 +1,5 @@
 VERSION_PREFIX="v5.x"
-LATEST_VERSION="5.7.9"
+LATEST_VERSION="5.10.48"
 
 mkdir kernel-build
 wget https://cdn.kernel.org/pub/linux/kernel/${VERSION_PREFIX}/linux-${LATEST_VERSION}.tar.xz
